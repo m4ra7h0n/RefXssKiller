@@ -1,5 +1,5 @@
 # RefXssKiller
-爬虫url+全参数爆破反射xss
+爬虫url+全参数, 爆破反射xss
 
 ## 安装
 `pip3 install aiohttp`
