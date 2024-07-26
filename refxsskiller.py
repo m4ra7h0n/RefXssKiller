@@ -50,7 +50,8 @@ def generate_params(payload, n, parameters):
         out = []
         for num, parameter in enumerate(parameters, start=1):
             encoded_value = quote(f"{payload}{(num - 1) % n + 1}")
-            out.append(f"{parameter}={encoded_value}")
+            encoded_key = quote(key, safe='')
+            out.append(f"{encoded_key}={encoded_value}")
             if num % n == 0:
                 yield '&'.join(out)
                 out.clear()
